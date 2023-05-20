@@ -1,15 +1,32 @@
 {
-  "name": "template-go-vercel",
+  "name": "template-go-react-vercel",
   "version": "1.0.0",
-  "repository": "https://github.com/riccardogiorato/template-go-vercel",
-  "author": "riccardogiorato <https://riccardogiorato.com/>",
+  "author": "salidae25",
+  "type": "module",
   "license": "MIT",
-  "dependencies": {
-    "vercel": "^28.16.12"
-  },
   "scripts": {
     "setup": "yarn vercel login && yarn vercel link",
     "start": "yarn vercel dev",
-    "dev": "yarn start"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vercel": "^28.16.12"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
   }
 }
